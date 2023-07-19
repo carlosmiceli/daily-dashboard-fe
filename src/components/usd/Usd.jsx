@@ -6,12 +6,12 @@ import './styles.css';
 export default function Usd() {
 	const [dollar, setDollar] = React.useState();
 
-	const addedTax = 0.75;
+	const addedTax = 1;
 
 	React.useEffect(() => {
 		usd.get()
 			.then((res) => {
-				setDollar(res.data);
+				setDollar(res.data)
 			})
 			.catch((err) => console.log(err));
 	}, []);

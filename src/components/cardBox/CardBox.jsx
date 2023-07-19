@@ -5,15 +5,14 @@ import Typography from '@mui/material/Typography';
 import Usd from '../usd/Usd';
 import Quote from '../quote/Quote';
 import History from '../history/History';
+import Life from '../life/Life';
+import Challenges from '../challenges/Challenges';
+import Spotify from '../spotify/Spotify';
 
 export default function CardBox(props) {
 	let content;
 
 	switch (props.type) {
-		case 'spotify': {
-			//statements;
-			break;
-		}
 		case 'quote': {
 			content = <Quote />;
 			break;
@@ -26,28 +25,20 @@ export default function CardBox(props) {
 			content = <Usd />;
 			break;
 		}
-		case 'soundcloud': {
+		case 'challenges': {
+			content = <Challenges />;
+			break;
+		}
+		case 'spotify': {
+			content = <Spotify />
+			break;
+		}
+		case 'chatbot': {
 			//statements;
 			break;
 		}
-		case 'dev-challenge': {
-			//statements;
-			break;
-		}
-		case 'dev-concept': {
-			//statements;
-			break;
-		}
-		case 'time-left': {
-			//statements;
-			break;
-		}
-		case 'nba': {
-			//statements;
-			break;
-		}
-		case 'dev-jobs': {
-			//statements;
+		case 'life': {
+			content = <Life />;
 			break;
 		}
 		default: {
