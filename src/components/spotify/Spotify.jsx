@@ -33,7 +33,7 @@ export default function Spotify() {
 	const authorizeAndLogin = () => {
 		spotify.authorize()
 			.then((response) => {
-				const popupWindow = window.open(response.data, 'Spotify Authorization', 'width=500,height=600');
+				const popupWindow = window.open(response.data, 'Spotify authorization', 'width=500,height=600');
 				const timer = setInterval(() => {
 					if (popupWindow.closed) {
 						clearInterval(timer);
