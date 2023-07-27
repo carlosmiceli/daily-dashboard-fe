@@ -47,8 +47,7 @@ export default function CardBox(props) {
 	}
 
 	return (
-		<div className='box'>
-			<Card sx={{ maxWidth: 400 }}>
+			<Card sx={{ width: '100%' }}>
 				<CardContent>
 					<Typography
 						sx={{ fontSize: 20 }}
@@ -60,6 +59,5 @@ export default function CardBox(props) {
 					{content}
 				</CardContent>
 			</Card>
-		</div>
 	);
 }

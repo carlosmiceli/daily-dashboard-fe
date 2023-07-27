@@ -1,12 +1,6 @@
 .cardContainer {
-    display: grid;
-    /* grid-template-columns: repeat(3, 1fr); */
-    grid-column-gap: 20px;
-    /* grid-row-gap: 20px; */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
 }
-
-@media (max-width: 850px) {
-    .cardContainer {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  }
