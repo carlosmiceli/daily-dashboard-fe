@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Typography from '@mui/material/Typography';
 import './styles.css';
 
 const averageLifespan = 77;
@@ -26,9 +25,9 @@ export default function AverageDaysAlive() {
     return (
         <div>
             <div className='daysAlive'>
-                <Typography sx={{ fontSize: 14 }} gutterBottom>
+                <p sx={{ fontSize: 14 }}>
                     You have approximately {daysAlive} days left to live.
-                </Typography>
+                </p>
             </div>
         </div>
     );

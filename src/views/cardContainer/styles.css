@@ -4,3 +4,11 @@
     gap: 20px;
     max-width: 600px;
 }
+
+.cardContainer h2 {
+    margin: 16px 0;
+}
+
+.cardContainer p {
+    margin: 12px 0;
+}

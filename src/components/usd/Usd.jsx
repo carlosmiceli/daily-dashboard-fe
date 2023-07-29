@@ -1,6 +1,5 @@
 import * as React from 'react';
 import usd from '../../services/usd.service';
-import Typography from '@mui/material/Typography';
 import './styles.css';
 
 export default function Usd() {
@@ -20,28 +19,22 @@ export default function Usd() {
 		<div>
 			{dollar && (
 				<div className='usd'>
-					<Typography
+					<p
 						sx={{ fontSize: 14 }}
-						color='green'
-						gutterBottom
 					>
 						{`Official Buy: ${
 							Math.round(dollar.oficial.value_buy * 100) / 100
 						}`}
-					</Typography>
-					<Typography
+					</p>
+					<p
 						sx={{ fontSize: 14 }}
-						color='green'
-						gutterBottom
 					>
 						{`Official Sell: ${
 							Math.round(dollar.oficial.value_sell * 100) / 100
 						}`}
-					</Typography>
-					<Typography
+					</p>
+					<p
 						sx={{ fontSize: 14 }}
-						color='green'
-						gutterBottom
 					>
 						{`Tourist Buy: ${
 							Math.round(
@@ -50,11 +43,9 @@ export default function Usd() {
 									100
 							) / 100
 						}`}
-					</Typography>
-					<Typography
+					</p>
+					<p
 						sx={{ fontSize: 14 }}
-						color='green'
-						gutterBottom
 					>
 						{`Tourist Sell: ${
 							Math.round(
@@ -63,25 +54,21 @@ export default function Usd() {
 									100
 							) / 100
 						}`}
-					</Typography>
-					<Typography
+					</p>
+					<p
 						sx={{ fontSize: 14 }}
-						color='green'
-						gutterBottom
 					>
 						{`Blue Buy: ${
 							Math.round(dollar.blue.value_buy * 100) / 100
 						}`}
-					</Typography>
-					<Typography
+					</p>
+					<p
 						sx={{ fontSize: 14 }}
-						color='green'
-						gutterBottom
 					>
 						{`Blue Sell: ${
 							Math.round(dollar.blue.value_sell * 100) / 100
 						}`}
-					</Typography>
+					</p>
 				</div>
 			)}
 		</div>

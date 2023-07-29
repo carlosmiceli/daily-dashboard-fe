@@ -1,7 +1,6 @@
 import * as React from 'react';
 import parse from 'html-react-parser';
 import history from '../../services/history.service';
-import Typography from '@mui/material/Typography';
 import './styles.css';
 
 export default function History() {
@@ -19,7 +18,7 @@ export default function History() {
 	return (
 		<div>
 			<div className='history'>
-				<Typography sx={{ fontSize: 14 }} gutterBottom>
+				<p sx={{ fontSize: 14 }}>
 					{parse(dailyHistory)}
 					<br />
 					<br />
@@ -32,7 +31,7 @@ export default function History() {
 						ZenQuotes API
 					</a>
 					.
-				</Typography>
+				</p>
 			</div>
 		</div>
 	);

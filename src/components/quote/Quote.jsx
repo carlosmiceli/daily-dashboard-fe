@@ -1,6 +1,5 @@
 import * as React from 'react';
 import quote from '../../services/quote.service';
-import Typography from '@mui/material/Typography';
 import './styles.css';
 
 export default function Quote() {
@@ -18,9 +17,9 @@ export default function Quote() {
 	return (
 		<div>
 			<div className='quote'>
-				<Typography sx={{ fontSize: 14 }} gutterBottom>
+				<p sx={{ fontSize: 14 }}>
 					{dailyQuote && `"${dailyQuote.q}" - ${dailyQuote.a}`}
-				</Typography>
+				</p>
 			</div>
 		</div>
 	);

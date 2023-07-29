@@ -14,13 +14,16 @@ export default function Spotify() {
 			setLoggedIn(true);
 			setIframeSrc(playlistUrl);
 		}
+		else {
+			console.log('No token found')
+		}
 	}, []);
 
 	const checkAuthorization = () => {
 		// Check if the user is already authorized
 		const spotifyToken = localStorage.getItem('spotify_token');	
-		console.log({ spotifyToken })
 		if (!spotifyToken) {
+			console.log('Not logged in')
 			authorizeAndLogin()
 		}
 		else {
@@ -41,11 +44,9 @@ export default function Spotify() {
 						const popupURL = popupWindow.location.href;
 						if (popupURL.includes('code=')) {
 							const code = new URLSearchParams(new URL(popupURL).search).get('code');
-							console.log({code})
 							if (code) {
 								spotify.token(code)
 								  .then((response) => {
-									console.log({ token_response: response });
 									const spotifyToken = response.data;
 									localStorage.setItem('spotify_token', spotifyToken);
 									popupWindow.close();
@@ -55,9 +56,6 @@ export default function Spotify() {
 									console.log(error);
 								  });
 							  }
-							//   else {
-							// 	// Handle error
-							// }
 							setIframeSrc(playlistUrl);
 							setLoggedIn(true);
 							popupWindow.close();
@@ -77,7 +75,7 @@ export default function Spotify() {
 		const token = localStorage.getItem('spotify_token');
 		spotify.addSongs(token)
 			.then(response => {
-				console.log({ response })
+				console.log('Success adding songs')
 			})
 			.catch(error => {
 				console.log({ error })
@@ -86,8 +84,8 @@ export default function Spotify() {
 
 	return (
 		<div className="spotify">
-			<button onClick={loggedIn ? handleButtonClick : checkAuthorization}>
-				{loggedIn ? 'Add Songs' : 'Authorize'}
+			<button className={'spotify-button'} onClick={loggedIn ? handleButtonClick : checkAuthorization}>
+				{loggedIn ? 'Add New Spotify Songs for DJ Sets' : 'Authorize'}
 			</button>
 			<div className="divider"></div>
 			{loggedIn ? (

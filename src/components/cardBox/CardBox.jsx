@@ -1,13 +1,13 @@
 import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
 import Usd from '../usd/Usd';
 import Quote from '../quote/Quote';
 import History from '../history/History';
 import Life from '../life/Life';
 import Challenges from '../challenges/Challenges';
 import Spotify from '../spotify/Spotify';
+import './styles.css';
 
 export default function CardBox(props) {
 	let content;
@@ -49,13 +49,11 @@ export default function CardBox(props) {
 	return (
 			<Card sx={{ width: '100%' }}>
 				<CardContent>
-					<Typography
+					<h2
 						sx={{ fontSize: 20 }}
-						color='text.primary'
-						gutterBottom
 					>
 						{props.title}
-					</Typography>
+					</h2>
 					{content}
 				</CardContent>
 			</Card>

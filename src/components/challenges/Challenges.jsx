@@ -1,7 +1,6 @@
 
 import * as React from 'react';
 import challenge from '../../services/challenges.service';
-import Typography from '@mui/material/Typography';
 import './styles.css';
 
 export default function Challenges() {
@@ -19,13 +18,12 @@ export default function Challenges() {
 		<div>
 			{challenge && (
 				<div className='challenge'>
-					<Typography
+					<p
 						sx={{ fontSize: 14 }}
-						color='green'
 						gutterBottom
 					>
 						{chal}
-					</Typography>
+					</p>
 				</div>
 			)}
 		</div>
